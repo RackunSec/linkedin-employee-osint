@@ -1,5 +1,5 @@
 # linkedin-employee-osint
-This is just a simple vanilla JavaScript app to scrape employees from company page.
+This is just a simple vanilla JavaScript app to scrape employees from company page. This is useful for red team/pentest engagements in which reconnaissance is in the statement of work. It simply looks at the page for elements and parses out the names (and other info) of the employees listed.
 
 ## Options
 There are different options available. Each is it's own block of code.
