@@ -10,7 +10,15 @@
   6. Run `sort -u` on the file.
   7. Do whatever else with the file you wish.
 */
+
+// JUST EMPLOYEE NAMES:
 var employees = document.getElementsByClassName("org-people-profile-card__profile-title t-black lt-line-clamp lt-line-clamp--single-line ember-view");
 for(var i=0;i<employees.length;i++){
   console.log(employees[i].innerHTML.replace(/\n.*/g,""));
+}
+
+// EMPLOYEE NAMES + JOB TITLES:
+var employees = document.getElementsByClassName("artdeco-entity-lockup artdeco-entity-lockup--stacked-center artdeco-entity-lockup--size-7 ember-view");
+for(var i=0;i<employees.length;i++){
+  console.log(employees[i].innerText.replace(/,/g," ").replace(/(?:\r\n|\r|\n|<br \/>)/g,",").replace(/,(\s+)?[0-9](nd|rd|th|st)([^,]+)?/,"").replace(/(\s+)?[0-9](nd|rd|th|st)([^,]+)?/,"").replace(/,\s+,/,""));
 }
