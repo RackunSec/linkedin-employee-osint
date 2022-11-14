@@ -5,6 +5,7 @@ This is just a simple vanilla JavaScript app to scrape employees from company pa
 There are different options available. Each is it's own block of code.
 * Employee names only
 * Employee names + titles (CSV)
+* Searching all of LinkedIn (not just the target company page)
 
 ## Usage
 This tool requires you to have a Linkedin.com account to use.
