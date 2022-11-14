@@ -24,3 +24,10 @@ console.log("Identified "+employees.length.toString()+" employees."); // Display
 for(var i=0;i<employees.length;i++){
   console.log(employees[i].innerText.replace(/,/g," ").replace(/(?:\r\n|\r|\n|<br \/>)/g,",").replace(/,(\s+)?[0-9](nd|rd|th|st)([^,]+)?/,"").replace(/(\s+)?[0-9](nd|rd|th|st)([^,]+)?/,"").replace(/,\s+,/,""));
 }
+
+// SEARCHING MAIN LINKEDIN SITE (NOT COMPANY PAGE)
+var employees = document.getElementsByClassName("reusable-search__result-container");
+console.log("Identified "+employees.length.toString()+" employees."); // Display how many are found so far
+for(var i=0;i<employees.length;i++){
+  console.log(employees[i].innerText.replace(/,/g," ").replace(/(?:\r\n|\r|\n|<br \/>)/g,",").replace(/,(\s+)?[0-9](nd|rd|th|st)([^,]+)?/,"").replace(/(\s+)?[0-9](nd|rd|th|st)([^,]+)?/,"").replace(/,\s+,/,""));
+}
