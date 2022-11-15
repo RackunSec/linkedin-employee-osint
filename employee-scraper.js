@@ -18,6 +18,9 @@ for(var i=0;i<employees.length;i++){
   console.log(employees[i].innerHTML.replace(/\n.*/g,""));
 }
 
+
+
+
 // EMPLOYEE NAMES + JOB TITLES:
 var employees = document.getElementsByClassName("artdeco-entity-lockup artdeco-entity-lockup--stacked-center artdeco-entity-lockup--size-7 ember-view");
 console.log("Identified "+employees.length.toString()+" employees."); // Display how many are found so far
@@ -25,9 +28,23 @@ for(var i=0;i<employees.length;i++){
   console.log(employees[i].innerText.replace(/,/g," ").replace(/(?:\r\n|\r|\n|<br \/>)/g,",").replace(/,(\s+)?[0-9](nd|rd|th|st)([^,]+)?/,"").replace(/(\s+)?[0-9](nd|rd|th|st)([^,]+)?/,"").replace(/,\s+,/,""));
 }
 
+
+
+
 // SEARCHING MAIN LINKEDIN SITE (NOT COMPANY PAGE)
+/* STEP 1: */
+var employees_list = []; // DO THIS ONLY ONCE
+// Get list of employees from current page:
+
+/* STEP 2: */
 var employees = document.getElementsByClassName("reusable-search__result-container");
-console.log("Identified "+employees.length.toString()+" employees."); // Display how many are found so far
+// Store them into employees_list[]
 for(var i=0;i<employees.length;i++){
-  console.log(employees[i].innerText.replace(/,/g," ").replace(/(?:\r\n|\r|\n|<br \/>)/g,",").replace(/,(\s+)?[0-9](nd|rd|th|st)([^,]+)?/,"").replace(/(\s+)?[0-9](nd|rd|th|st)([^,]+)?/,"").replace(/,\s+,/,""));
+  employees_list.push((employees[i].innerText.replace(/,/g," ").replace(/(?:\r\n|\r|\n|<br \/>)/g,",").replace(/,(\s+)?[0-9](nd|rd|th|st)([^,]+)?/,"").replace(/(\s+)?[0-9](nd|rd|th|st)([^,]+)?/,"").replace(/,\s+,/,"")));
 }
+
+/* STEP 3: */
+// Finally, when all done scrolling / paging:
+console.log(employees_list);
+// Right click on the object and copy the object
+// This will be an array that is compatible with JS/Python/etc
